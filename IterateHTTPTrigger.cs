@@ -37,7 +37,7 @@ namespace Iterate.GPT
                 Content = requestBody
             };
 
-            request.Headers.Add("Authorization", "Bearer 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");
+            request.Headers.Add("Authorization", "Bearer " + System.Environment.GetEnvironmentVariable("OPENAPI_KEY"));
             
             HttpResponseMessage response = await client.SendAsync(request);
 
